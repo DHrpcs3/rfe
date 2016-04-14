@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="include\ui">
+      <UniqueIdentifier>{b9c4f4c0-e6ed-4167-924c-3807822106c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\core">
+      <UniqueIdentifier>{662fdd33-6702-48d1-a080-3c56dc5d2184}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\graphics">
+      <UniqueIdentifier>{99e29643-02e7-48d2-b39a-8959d4ed3e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\graphics\opengl">
+      <UniqueIdentifier>{bb00071d-b08a-4ce6-8d25-e1418b6d7cdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\ui\opengl">
+      <UniqueIdentifier>{87edaa60-e1b9-4c10-8b51-2c699e683439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\loaders">
+      <UniqueIdentifier>{1ee075ca-f5a5-4f7e-b03c-aa11ef0ece11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\animation">
+      <UniqueIdentifier>{0c650705-fb1e-41fb-b8e3-dc5f056fd1d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{9021d59c-0ac6-4961-add2-fc3672cc50e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\graphics">
+      <UniqueIdentifier>{0d653f13-c122-4c33-8dcc-08898d306876}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\loaders">
+      <UniqueIdentifier>{10a401e8-c8af-418e-b72c-e8ad3f86ad0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\animation">
+      <UniqueIdentifier>{f117898f-97ea-4b6a-9bbc-bae3cd02ea16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ui">
+      <UniqueIdentifier>{45c9ac58-eb77-4240-b851-489fa4c2e415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\graphics\opengl">
+      <UniqueIdentifier>{867246bb-639f-4fe0-817c-a7e3969acbc3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\rfe\core.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\application.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\button.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\ground.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\label.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\opengl.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\progress_circle.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\sizer.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\widget.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\window.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\opengl\draw_context.h">
+      <Filter>include\ui\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\opengl\rbo.h">
+      <Filter>include\graphics\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\opengl\texture.h">
+      <Filter>include\graphics\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\opengl\vao.h">
+      <Filter>include\graphics\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\opengl\buffer.h">
+      <Filter>include\graphics\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\opengl\fbo.h">
+      <Filter>include\graphics\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\opengl\gl_proc_table.h">
+      <Filter>include\graphics\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\opengl\helpers.h">
+      <Filter>include\graphics\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\opengl\opengl.h">
+      <Filter>include\graphics\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\core\event.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\core\event_binder_t.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\core\events.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\core\events_queue.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\core\fmt.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\core\id_manager.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\core\theme.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\core\types.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\core\be_t.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\progress.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\loaders\png.h">
+      <Filter>include\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\core\thread_queue.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\animation.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\loaders.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\animation\animation.h">
+      <Filter>include\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\image.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\material.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\material_color.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\material_texture.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\model.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\opengl.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\pixel_format.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\shader.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\texture.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\color.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\core.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\draw_context.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\graphics\draw_mode.h">
+      <Filter>include\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\animation\easing.h">
+      <Filter>include\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\list.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\list_entry.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rfe\ui\scrollable.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\animation\animation.cpp">
+      <Filter>src\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\fmt.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\types.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\event_binder_t.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\events.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\events_queue.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\model.cpp">
+      <Filter>src\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\texture.cpp">
+      <Filter>src\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\draw_context.cpp">
+      <Filter>src\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\opengl\helpers.cpp">
+      <Filter>src\graphics\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\opengl\opengl.cpp">
+      <Filter>src\graphics\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loaders\png.cpp">
+      <Filter>src\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\opengl_draw_context.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\progress.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\progress_circle.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\sizer.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\widget.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\windows_window.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\x11_window.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\application.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\button.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\ground.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\label.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\animation\easing.cpp">
+      <Filter>src\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\list.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\list_entry.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\scrollable.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -18,9 +18,26 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="zlib\adler32.c" />
+    <ClCompile Include="zlib\compress.c" />
+    <ClCompile Include="zlib\crc32.c" />
+    <ClCompile Include="zlib\deflate.c" />
+    <ClCompile Include="zlib\gzclose.c" />
+    <ClCompile Include="zlib\gzlib.c" />
+    <ClCompile Include="zlib\gzread.c" />
+    <ClCompile Include="zlib\gzwrite.c" />
+    <ClCompile Include="zlib\infback.c" />
+    <ClCompile Include="zlib\inffast.c" />
+    <ClCompile Include="zlib\inflate.c" />
+    <ClCompile Include="zlib\inftrees.c" />
+    <ClCompile Include="zlib\trees.c" />
+    <ClCompile Include="zlib\uncompr.c" />
+    <ClCompile Include="zlib\zutil.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{39D37FF2-64B6-4C26-AE82-C984B1B4BD46}</ProjectGuid>
-    <RootNamespace>rfe</RootNamespace>
+    <ProjectGuid>{CA633ADF-09FD-40F2-A109-229F2AACF03B}</ProjectGuid>
+    <RootNamespace>zlib</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -69,54 +86,44 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ReferencePath>$(ReferencePath)</ReferencePath>
-    <IncludePath>$(ProjectDir)include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rdparty\freetype\include\;$(SolutionDir)3rdparty\libpng\;$(SolutionDir)3rdparty\GLext\</IncludePath>
+    <TargetExt>.lib</TargetExt>
     <OutDir>$(SolutionDir)lib\$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Platform)-$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)lib\$(Platform)-$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ReferencePath>$(ReferencePath)</ReferencePath>
-    <IncludePath>$(ProjectDir)include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rdparty\freetype\include\;$(SolutionDir)3rdparty\libpng\;$(SolutionDir)3rdparty\GLext\</IncludePath>
+    <TargetExt>.lib</TargetExt>
     <OutDir>$(SolutionDir)lib\$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Platform)-$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)lib\$(Platform)-$(Configuration)\;$(LibraryPath)</LibraryPath>
-    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ReferencePath>$(ReferencePath)</ReferencePath>
-    <IncludePath>$(ProjectDir)include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rdparty\freetype\include\;$(SolutionDir)3rdparty\libpng\;$(SolutionDir)3rdparty\GLext\</IncludePath>
+    <TargetExt>.lib</TargetExt>
     <OutDir>$(SolutionDir)lib\$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Platform)-$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)lib\$(Platform)-$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ReferencePath>$(ReferencePath)</ReferencePath>
-    <IncludePath>$(ProjectDir)include\;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)3rdparty\freetype\include\;$(SolutionDir)3rdparty\libpng\;$(SolutionDir)3rdparty\GLext\</IncludePath>
+    <TargetExt>.lib</TargetExt>
     <OutDir>$(SolutionDir)lib\$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Platform)-$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)lib\$(Platform)-$(Configuration)\;$(LibraryPath)</LibraryPath>
-    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <Lib>
-      <AdditionalDependencies>zlib.lib;libpng.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <Lib>
-      <AdditionalDependencies>zlib.lib;libpng.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -125,14 +132,12 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-    <Lib>
-      <AdditionalDependencies>zlib.lib;libpng.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -141,99 +146,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-    <Lib>
-      <AdditionalDependencies>zlib.lib;libpng.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="include\rfe\animation.h" />
-    <ClInclude Include="include\rfe\animation\animation.h" />
-    <ClInclude Include="include\rfe\animation\easing.h" />
-    <ClInclude Include="include\rfe\core.h" />
-    <ClInclude Include="include\rfe\core\be_t.h" />
-    <ClInclude Include="include\rfe\core\event.h" />
-    <ClInclude Include="include\rfe\core\events.h" />
-    <ClInclude Include="include\rfe\core\events_queue.h" />
-    <ClInclude Include="include\rfe\core\event_binder_t.h" />
-    <ClInclude Include="include\rfe\core\fmt.h" />
-    <ClInclude Include="include\rfe\core\id_manager.h" />
-    <ClInclude Include="include\rfe\core\theme.h" />
-    <ClInclude Include="include\rfe\core\thread_queue.h" />
-    <ClInclude Include="include\rfe\core\types.h" />
-    <ClInclude Include="include\rfe\graphics.h" />
-    <ClInclude Include="include\rfe\graphics\color.h" />
-    <ClInclude Include="include\rfe\graphics\core.h" />
-    <ClInclude Include="include\rfe\graphics\draw_context.h" />
-    <ClInclude Include="include\rfe\graphics\draw_mode.h" />
-    <ClInclude Include="include\rfe\graphics\image.h" />
-    <ClInclude Include="include\rfe\graphics\material.h" />
-    <ClInclude Include="include\rfe\graphics\material_color.h" />
-    <ClInclude Include="include\rfe\graphics\material_texture.h" />
-    <ClInclude Include="include\rfe\graphics\model.h" />
-    <ClInclude Include="include\rfe\graphics\opengl.h" />
-    <ClInclude Include="include\rfe\graphics\opengl\buffer.h" />
-    <ClInclude Include="include\rfe\graphics\opengl\fbo.h" />
-    <ClInclude Include="include\rfe\graphics\opengl\gl_proc_table.h" />
-    <ClInclude Include="include\rfe\graphics\opengl\helpers.h" />
-    <ClInclude Include="include\rfe\graphics\opengl\opengl.h" />
-    <ClInclude Include="include\rfe\graphics\opengl\rbo.h" />
-    <ClInclude Include="include\rfe\graphics\opengl\texture.h" />
-    <ClInclude Include="include\rfe\graphics\opengl\vao.h" />
-    <ClInclude Include="include\rfe\graphics\pixel_format.h" />
-    <ClInclude Include="include\rfe\graphics\shader.h" />
-    <ClInclude Include="include\rfe\graphics\texture.h" />
-    <ClInclude Include="include\rfe\loaders.h" />
-    <ClInclude Include="include\rfe\loaders\png.h" />
-    <ClInclude Include="include\rfe\ui.h" />
-    <ClInclude Include="include\rfe\ui\application.h" />
-    <ClInclude Include="include\rfe\ui\button.h" />
-    <ClInclude Include="include\rfe\ui\ground.h" />
-    <ClInclude Include="include\rfe\ui\label.h" />
-    <ClInclude Include="include\rfe\ui\list.h" />
-    <ClInclude Include="include\rfe\ui\list_entry.h" />
-    <ClInclude Include="include\rfe\ui\opengl.h" />
-    <ClInclude Include="include\rfe\ui\opengl\draw_context.h" />
-    <ClInclude Include="include\rfe\ui\progress.h" />
-    <ClInclude Include="include\rfe\ui\progress_circle.h" />
-    <ClInclude Include="include\rfe\ui\scrollable.h" />
-    <ClInclude Include="include\rfe\ui\sizer.h" />
-    <ClInclude Include="include\rfe\ui\widget.h" />
-    <ClInclude Include="include\rfe\ui\window.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\animation\animation.cpp" />
-    <ClCompile Include="src\animation\easing.cpp" />
-    <ClCompile Include="src\core\events.cpp" />
-    <ClCompile Include="src\core\events_queue.cpp" />
-    <ClCompile Include="src\core\event_binder_t.cpp" />
-    <ClCompile Include="src\core\fmt.cpp" />
-    <ClCompile Include="src\core\types.cpp" />
-    <ClCompile Include="src\graphics\draw_context.cpp" />
-    <ClCompile Include="src\graphics\model.cpp" />
-    <ClCompile Include="src\graphics\opengl\helpers.cpp" />
-    <ClCompile Include="src\graphics\opengl\opengl.cpp" />
-    <ClCompile Include="src\graphics\texture.cpp" />
-    <ClCompile Include="src\loaders\png.cpp" />
-    <ClCompile Include="src\ui\application.cpp" />
-    <ClCompile Include="src\ui\button.cpp" />
-    <ClCompile Include="src\ui\ground.cpp" />
-    <ClCompile Include="src\ui\label.cpp" />
-    <ClCompile Include="src\ui\list.cpp" />
-    <ClCompile Include="src\ui\list_entry.cpp" />
-    <ClCompile Include="src\ui\opengl_draw_context.cpp" />
-    <ClCompile Include="src\ui\progress.cpp" />
-    <ClCompile Include="src\ui\progress_circle.cpp" />
-    <ClCompile Include="src\ui\scrollable.cpp" />
-    <ClCompile Include="src\ui\sizer.cpp" />
-    <ClCompile Include="src\ui\widget.cpp" />
-    <ClCompile Include="src\ui\windows_window.cpp" />
-    <ClCompile Include="src\ui\x11_window.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
